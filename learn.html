@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Antariksh</title>
+    <link rel="icon" href= selected.png type="image/x-icon"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: Arial, sans-serif;
+          overflow: hidden;
+          background-image: url('bg1.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+
+        #menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding-top: 20px;
+            transition: 0.3s;
+            transform: translateX(-100%);
+            z-index: 2;
+        }
+
+        #menu a {
+            padding: 15px;
+            text-decoration: none;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        #menu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .content {
+            margin-left: 250px;
+            transition: 0.3s;
+            padding: 16px;
+        }
+
+        .overlay {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            text-align: left;
+            max-width: 600px;
+            opacity: 0.9;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .overlay p {
+            margin: 10px 0;
+        }
+
+        .menu-icon {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+            font-size: 24px;
+            color: white;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu">
+        <br>
+        <a href="#">Main Page</a>
+        <a href="#">Rocket</a>
+        <a href="#">Satellite</a>
+    </div>
+    
+    <div class="content">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="overlay" id="overlay">
+            <h1>Your Title</h1>
+            <p>This is the first paragraph of your content.</p>
+            <p>This is the second paragraph of your content.</p>
+            <!-- Add more paragraphs as needed -->
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            var content = document.querySelector('.content');
+            menu.style.transform = menu.style.transform === 'translateX(-100%)' ? 'translateX(0)' : 'translateX(-100%)';
+            content.style.marginLeft = content.style.marginLeft === '250px' ? '0' : '250px';
+        }
+    </script>
+</body>
+</html>
