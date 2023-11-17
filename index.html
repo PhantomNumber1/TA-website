@@ -4,9 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Antariksh</title>
-    <link rel="icon" href="Selected.png" type="image/x-icon">
+    <link rel="icon" href="selected.png" type="image/x-icon"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <a href="https://rvce.edu.in/">
+    <img src="RV_logo.png" alt="GFG image" 
+        alt="RV_logo"
+        width="100"
+        height="100"
+        align="right"/>
+    </a>
     <style>
+        h2 {
+            color:white;
+        }
+        p{
+            color:white
+        }
+        h1 {
+            text-align: center;
+            /* margin-top: 50px; Added margin-top for spacing */
+            /* Added gradient effect for changing colors in h1 */
+            background: linear-gradient(45deg, #3498db, #e74c3c, #2ecc71, #f39c12);
+            background-size: 400% 400%;
+            color: white;
+            font-size: 32px;
+            padding: 20px;
+            border-radius: 10px;
+            animation: gradient 10s infinite; /* Added animation for gradient effect */
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+h1:hover {
+    color: #e74c3c; /* Color on hover */
+}
+
         body {
             margin: 0;
             padding: 0;
@@ -50,25 +92,6 @@
             padding: 16px;
         }
 
-        .overlay {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            text-align: left;
-            max-width: 600px;
-            opacity: 0.9;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-        }
-
-        .overlay p {
-            margin: 10px 0;
-        }
-
         .menu-icon {
             position: fixed;
             top: 20px;
@@ -78,27 +101,62 @@
             color: white;
             z-index: 3;
         }
+
+        .social-icons {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
+    <h1 align="middle">Team Antariksh</h1>
+    <h2 align="middle">STUDENT SPACE TECHNOLOGY TEAM</h2>
     <div id="menu">
         <br>
         <a href="#">Main Page</a>
         <a href="#">Rocket</a>
         <a href="#">Satellite</a>
     </div>
-
+    
     <div class="content">
         <div class="menu-icon" onclick="toggleMenu()">
             <i class="fas fa-bars"></i>
         </div>
-
-        <div class="overlay" id="overlay">
-            <h1>Your Title</h1>
-            <p>This is the first paragraph of your content.</p>
-            <p>This is the second paragraph of your content.</p>
-            <!-- Add more paragraphs as needed -->
-        </div>
+    </div>
+            
+        <p> R V COLLEGE OF ENGINEERING
+            Team Antariksh is an emerging space technology student club whose goal is to
+            understand, disseminate and apply their engineering skills for innovation in the
+            field of aerospace technology.
+            The hundred member strong team is working on two research projects namely, a
+            novel idea to perform microbiological experiment in space with the help of ISRO,
+            and designing a Sounding Rocket with a scientific payload aiming to perform an
+            experiment at higher altitudes.
+            VISION
+            To inspire young minds to take up challenging tasks in aerospace technology
+            through interdisciplinary research and development.
+            MISSION STATEMENT
+            To develop a microbiological payload for ISRO's PSLV-4 initiative.
+            To design, develop and test a rocket for the 10k ft solid motor category at the
+            Spaceport America Cup, New Mexico USA.
+            To increase the participation of the students of RV College of Engineering in
+            Space Research and Technological development in India.
+            To participate in the research and development of innovative scientific
+            payloads for sounding rockets and nano-satellites.</p>
+    <div class="social-icons">
+        <!-- <a href="#" target="_blank"><i class="fab fa-facebook"></i></a> -->
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
     </div>
 
     <script>
