@@ -45,9 +45,6 @@
             }
         }
 
-h1:hover {
-    color: #e74c3c; /* Color on hover */
-}
 
         body {
             margin: 0;
@@ -123,9 +120,9 @@ h1:hover {
     <h2 align="middle">STUDENT SPACE TECHNOLOGY TEAM</h2>
     <div id="menu">
         <br>
-        <a href="#">Main Page</a>
-        <a href="#">Rocket</a>
-        <a href="#">Satellite</a>
+        <a href="#" onclick="goToMainPage()">Main Page</a>
+        <a href="#" onclick="goToRocketPage()">Rocket</a>
+        <a href="#" onclick="goToSatellitePage()">Satellite</a>
     </div>
     
     <div class="content">
@@ -154,9 +151,8 @@ h1:hover {
             To participate in the research and development of innovative scientific
             payloads for sounding rockets and nano-satellites.</p>
     <div class="social-icons">
-        <!-- <a href="#" target="_blank"><i class="fab fa-facebook"></i></a> -->
-        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram" onclick="goToInstagram()"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin" onclick="goToLinkedIn()"></i></a>
     </div>
 
     <script>
@@ -166,6 +162,24 @@ h1:hover {
             menu.style.transform = menu.style.transform === 'translateX(-100%)' ? 'translateX(0)' : 'translateX(-100%)';
             content.style.marginLeft = content.style.marginLeft === '250px' ? '0' : '250px';
         }
+        function goToMainPage() {
+        window.location.href = 'index.html';
+    }
+
+    function goToRocketPage() {
+        window.location.href = 'rocket.html';
+    }
+
+    function goToSatellitePage() {
+        window.location.href = 'satellite.html';
+    }
+    function goToInstagram() {
+        window.location.href = 'https://www.instagram.com/';
+    }
+
+    function goToLinkedIn() {
+        window.location.href = 'https://www.linkedin.com/';
+    }
     </script>
 </body>
 </html>
